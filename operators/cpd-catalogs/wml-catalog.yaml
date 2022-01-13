@@ -7,7 +7,6 @@ spec:
   displayName: Cloud Pak for Data Watson Machine Learning
   publisher: IBM
   sourceType: grpc
-  imagePullPolicy: Always
   image: icr.io/cpopen/ibm-cpd-wml-operator-catalog@sha256:1efca82d32dfb89f515570e802af1e7b5a29a4e71f678bee374577f568866d96
   updateStrategy:
     registryPoll:
