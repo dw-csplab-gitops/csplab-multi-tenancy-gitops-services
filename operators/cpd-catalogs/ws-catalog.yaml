@@ -5,6 +5,7 @@ metadata:
   namespace: openshift-marketplace
 spec:
   sourceType: grpc
+  # ibm-wsl-2.0.4.tgz
   image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog@sha256:14352ea4f71c1917cdeb860b64645fd56a3812ff69255b26dfb0c7199005e1a0
   displayName: CPD Watson Studio Runtimes
   publisher: IBM

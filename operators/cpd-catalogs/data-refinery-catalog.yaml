@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-datarefinery-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: Cloud Pak for Data IBM DataRefinery
+  # ibm-datarefinery-1.0.4.tgz
+  image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog@sha256:e163f4d555cf0cedea4df541bb616d28868663f26c40310120385a3f33676ce2
+  publisher: IBM
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 45m

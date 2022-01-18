@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ccs-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: CPD Common Core Services
+  # ibm-ccs-1.0.4.tgz
+  image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog@sha256:38aed2c8541a1f8eb430eeba2980fbca0cbc21de3ef23036e811ab18a7eff5b0
+  publisher: IBM
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 45m
