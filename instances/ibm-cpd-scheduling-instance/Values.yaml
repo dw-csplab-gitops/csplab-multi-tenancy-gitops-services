@@ -5,6 +5,7 @@
 ibm-cpd-scheduling-instance:
   ibmcpdschedulerinstance:
     name: ibm-cpd-scheduler
+    syncWave: "235"
     spec:
       version: 1.3.1
       cluster:
