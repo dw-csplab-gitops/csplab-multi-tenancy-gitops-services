@@ -39,5 +39,5 @@ argocd-hook-job:
     command: "bash"
     args:
       - "-c"
-      - "while !  [ `kubectl get scheduling -n ibm-common-services -o jsonpath='{.items[0].status.cpd-schedulingStatus}'` = \"Completed\" ] > /dev/null; do echo \"checking for Cloud Pak for Data Scheduler....\"; sleep 30; done; echo \"Scheduler is installed.\""
+      - "set -o xtrace; while !  [ `kubectl get scheduling -n ibm-common-services -o jsonpath='{.items[0].status.cpd-schedulingStatus}'` = \"Completed\" ] > /dev/null; do echo \"checking for Cloud Pak for Data Scheduler....\"; sleep 30; done; echo \"Scheduler is installed.\""
 
