@@ -1,0 +1,6 @@
+apiVersion: cpd.ibm.com/v1
+kind: Ibmcpd
+metadata:
+  name: {{ .Values.ibmcpdplatforminstance.name }}
+spec:
+  {{- toYaml .Values.ibmcpdplatforminstance.spec | nindent 2 }}
