@@ -2,19 +2,21 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: cpd-scheduling-presync-hook-
-  namespace: ibm-common-services
+  namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
+      serviceAccountName: openshift-gitops-cntk-argocd-application-controller
       containers:
         - name: job
-          image: "quay.io/ibmgaragecloud/nodejs"
+          image: "quay.io/ibmgaragecloud/helm-kubectl:3.2.3"
           imagePullPolicy: IfNotPresent
           command: ["bash"]
           args:
             - "-c"
-            - "while !  [ `oc get scheduling -n ibm-common-services -o jsonpath='{.items[0].status.cpd-schedulingStatus} {\"\n\"}'` = \"Completed\" ] > /dev/null; do sleep 30; done"
+            - "while !  [ `kubectl get scheduling -n ibm-common-services -o jsonpath='{.items[0].status.cpd-schedulingStatus}'` = \"Completed\" ] > /dev/null; do \"checking for Cloud Pak for Data Scheduler....\"; sleep 30; done; echo \"Scheduler is installed.\""
       restartPolicy: Never
   backoffLimit: 4
