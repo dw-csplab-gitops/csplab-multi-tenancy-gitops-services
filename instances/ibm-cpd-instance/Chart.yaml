@@ -8,3 +8,6 @@ dependencies:
   - name: argocd-hook-job
     version: 0.1.4
     repository: https://charts.cloudnativetoolkit.dev
+  - name: ibm-cpd-platform-instance
+    version: 0.1.1
+    repository: https://charts.cloudnativetoolkit.dev
