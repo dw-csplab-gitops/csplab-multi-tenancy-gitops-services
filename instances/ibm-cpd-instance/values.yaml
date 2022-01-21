@@ -35,7 +35,7 @@ argocd-hook-job:
     enabled: false
   container:
     image: "quay.io/ibmgaragecloud/helm-kubectl"
-    tag: "latest"
+    tag: "3.2.3"
     command: "bash"
     args:
       - "-c"
