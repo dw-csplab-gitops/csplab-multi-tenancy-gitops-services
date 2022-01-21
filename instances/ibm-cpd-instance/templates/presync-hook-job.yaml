@@ -14,7 +14,7 @@ spec:
           imagePullPolicy: IfNotPresent
           command: ["bash"]
           args:
-            - "c"
+            - "-c"
             - "while !  [ `oc get scheduling -n ibm-common-services -o jsonpath='{.items[0].status.cpd-schedulingStatus} {\"\n\"}'` = \"Completed\" ] > /dev/null; do sleep 30; done"
       restartPolicy: Never
   backoffLimit: 4
