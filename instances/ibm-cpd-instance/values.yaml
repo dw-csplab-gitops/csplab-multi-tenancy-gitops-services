@@ -26,7 +26,7 @@ ibm-cpd-platform-instance:
 
 argocd-hook-job:
   name: cpd-platform-presync
-  namespace: ibm-common-services
+  namespace: openshift-gitops
   hook:
     enabled: true
     hooktype: PreSync
