@@ -9,5 +9,5 @@ dependencies:
     version: 0.1.4
     repository: https://charts.cloudnativetoolkit.dev
   - name: ibm-cp4d-watson-studio-instance
-    version: 0.1.0
+    version: 0.1.2
     repository: https://charts.cloudnativetoolkit.dev
