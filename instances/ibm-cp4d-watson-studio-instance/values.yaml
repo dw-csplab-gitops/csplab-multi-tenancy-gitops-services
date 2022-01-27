@@ -27,7 +27,8 @@ argocd-hook-job:
       apiGroups:
         - "cpd.ibm.com"
       resources:
-        - ibmcpd
+        - Ibmcpd
+        - ibmcpds
   init:
     enabled: false
   container:
